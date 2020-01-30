@@ -20,7 +20,7 @@ class Waiter
         # Get the largest tip amount
         max_tip = Meal.all.map{|x| x.tip}.max
         # Find the with the larget tip
-        meal = Meal.all.find{|x| x.tip == max_tip}
+        meal = max_tip[0]
 
         # Finally return the customer who tipped the most
         meal.customer
